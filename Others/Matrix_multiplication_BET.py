@@ -1,30 +1,31 @@
 from numpy import *
 a = int(input("Enter matrix length: "))
-arr1 = array([[]*a])
-arr2 = array([[]*a])
+arr1 = array([[0*a]*a])
+arr2 = array([[0*a]*a])
+for i in range(a):
+    for j in range(a):
+        print(arr1[i][j], end=" ")
+    print();
+for i in range(a):
+    for j in range(a):
+        print(arr2[i][j], end=" ")
+    print();
 print("Enter elements of first array: ")
-for i in range(a):
-    for j in range(a):
-        arr1[i].append(0);
-for i in range(a):
-    for j in range(a):
+for i in range(0,a):
+    for j in range(0,a):
         arr1[i][j] = int(input())
-
-for i in range(a):
-    for j in range(a):
-        arr2[i].append(0);
-
-for i in range(a):
-    for j in range(a):
+print("Enter elements of second array: ")
+for i in range(0,a):
+    for j in range(0,a):
         arr2[i][j] = int(input())
 
-solArr = array([[]*a])
+solArr = array([[0*a]*a])
 c = 0;
 d = 0;
-for i in range(a*a):
+for i in range(0, a*a):
     temp = 0;
-    for j in range(a):
-        for l in range(a):
+    for j in range(0,a):
+        for l in range(0, a):
             temp += arr1[j][l] * arr2[l][j]
         solArr[c][d];
         if c == a:
