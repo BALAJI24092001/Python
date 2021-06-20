@@ -5,7 +5,7 @@ arr = array('f',[])
 for i in range(a):
     arr.append(int(input()))
 
-print("x","\t","x - xbar",'\t',"(x-xbar)^2");
+print("x","\t","x - xbar",'\t\t',"(x-xbar)^2");
 
 b = 0;
 for i in arr:
