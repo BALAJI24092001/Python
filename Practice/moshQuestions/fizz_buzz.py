@@ -6,13 +6,14 @@
 #     Otherwise, it should return the same number.
 
 def fizz_buzz(a):
-    if a%3 == 0:
-        if a%5 == 0:
+    if a % 3 == 0:
+        if a % 5 == 0:
             return "FizzBuzz"
-        return "Fizz";
-    elif a%5 == 0:
-        return "Buzz";
+        return "Fizz"
+    elif a % 5 == 0:
+        return "Buzz"
     else:
-        return a;
+        return a
 
-print(fizz_buzz(int(input("Enter a number: "))));
+
+print(fizz_buzz(int(input("Enter a number: "))))
