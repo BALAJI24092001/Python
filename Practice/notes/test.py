@@ -1,1 +1,0 @@
-### To store running notes for python tutorials
