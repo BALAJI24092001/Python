@@ -6,11 +6,12 @@ con = sqlite3.connect("customers.db")
 # Create a cursor
 c = con.cursor()
 # create a table
-c.execute(""" CREATE TABLE custmers(
+c.execute(""" CREATE TABLE customers(
     first_name TEXT,
     last_name TEXT,
     email TEXT
 ) 
+
 """)
 
 
