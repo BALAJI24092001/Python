@@ -27,7 +27,7 @@ class SLinkedList:
         if MiddleNode is None:
             print("Invalid middle node")
             return
-        NewNode = Node(datavalue)
+        NewNode = Node(newdata)
         NewNode.nextvalue = MiddleNode.nextvalue
         MiddleNode.nextvalue = NewNode
 
