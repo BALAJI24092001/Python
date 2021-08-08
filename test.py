@@ -8,6 +8,11 @@ class SLinkedList:
     def __init__(self) -> None:
         self.headval = None
 
+    def AtBeg(self, newdata):
+        newnode = Node(newdata)
+        newnode.nextvalue = self.headval
+        self.headval = newnode
+
     def AtEnd(self, datavalue):
         NewNode = Node(datavalue)
         if self.headval is None:
@@ -18,11 +23,6 @@ class SLinkedList:
             laste = laste.nextvalue
         laste.nextvalue = NewNode
 
-    def AtBeg(self, newdata):
-        newnode = Node(newdata)
-        newnode.nextvalue = self.headval
-        self.headval = newnode
-
     def InBetween(self, MiddleNode, newdata):
         if MiddleNode is None:
             print("Invalid middle node")
@@ -30,6 +30,17 @@ class SLinkedList:
         NewNode = Node(newdata)
         NewNode.nextvalue = MiddleNode.nextvalue
         MiddleNode.nextvalue = NewNode
+
+    def RemoveNode(self, removekey):
+        head = self.headval
+        while head is not None:
+            if head.datavalue == removekey:
+                break
+            BeforeNode = head
+            head = head.nextvalue
+
+        BeforeNode.nextvalue = head.nextvalue
+        del(head)
 
     def listprint(self):
         laste = self.headvalue
