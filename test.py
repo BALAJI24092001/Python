@@ -23,6 +23,14 @@ class SLinkedList:
         newnode.nextvalue = self.headval
         self.headval = newnode
 
+    def InBetween(self, MiddleNode, newdata):
+        if MiddleNode is None:
+            print("Invalid middle node")
+            return
+        NewNode = Node(datavalue)
+        NewNode.nextvalue = MiddleNode.nextvalue
+        MiddleNode.nextvalue = NewNode
+
     def listprint(self):
         laste = self.headvalue
         while laste is not None:
