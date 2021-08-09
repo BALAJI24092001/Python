@@ -40,7 +40,7 @@ class SLinkedList:
             head = head.nextvalue
 
         BeforeNode.nextvalue = head.nextvalue
-        del(head)
+        head = None
 
     def listprint(self):
         laste = self.headvalue
