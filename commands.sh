@@ -16,8 +16,8 @@ pip install --upgrade TensorFlow
 pip freeze
 
 # Django enviorment setup
-    python --version
-    pip freeze
+python --version
+pip freeze
     ##Create a Pipenv-based Virtual Environment:
     mkdir folder
     cd folder
