@@ -1,0 +1,1 @@
+{"name":"Local: nested_list","url":"d:\\D\\GitHub\\Python\\HackerRank\\nested_list.py","tests":[{"id":1630388523101,"input":"5\nHarsh\n20   \nBeria\n20   \nVarun   \n19      \nKakunami\n19      \nVikas   \n21","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\D\\GitHub\\Python\\HackerRank\\nested_list.py","group":"local","local":true}

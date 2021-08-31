@@ -1,0 +1,38 @@
+def print_formatted(number):
+    # print (str(i).rjust(w,' '),str(oct(i)[1:]).rjust(w,' '),str(hex(i)[2:].upper()).rjust(w,' '),str(bin(i)[2:]).rjust(w,' '),sep=' ')
+    for i in range(1, number+1):
+        octv = list(str(oct(i)))
+        octv.reverse()
+        octv.pop()
+        octv.pop()
+        octv.reverse()
+        octv = int(''.join(octv))
+        hexv = list(str(hex(i)))
+        hexv.reverse()
+        hexv.pop()
+        hexv.pop()
+        hexv.reverse()
+        hexv = int(''.join(hexv))
+        binv = list(str(bin(i)))
+        binv.reverse()
+        binv.pop()
+        binv.pop()
+        binv.reverse()
+        binv = int(''.join(binv))
+        i = str(i)
+        octv = str(octv)
+        hexv = str(hexv)
+        binv = str(binv)
+        temp = len(str(bin(number)))
+        i = i.rjust(temp-2)
+        octv = octv.rjust(temp-2)
+        hexv = hexv.rjust(temp-2)
+        binv = binv.rjust(temp-2)
+        if i == 1:
+            print(' '*4, end='')
+        print(i, octv, hexv, binv)
+
+    # your code goes here
+if __name__ == '__main__':
+    n = int(input())
+    print_formatted(n)
