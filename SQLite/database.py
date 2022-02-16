@@ -11,7 +11,6 @@ c.execute(""" CREATE TABLE customers(
     last_name TEXT,
     email TEXT
 ) 
-
 """)
 
 
