@@ -15,29 +15,42 @@ Where &beta;<sub>i</sub> are called the regression parameters or coefficients, a
 
 ### Steps in Regression Analysis
 
+
 - #### Statement of the problem
 
-Regression analysis usually starts with a formulation of the problem. This includes the determination of the question(s) to be addressed by the analysis. The problem statement is the first and perhaps the most important step in regression analysis. It is important because an ill-defined problem or a misformulated question can lead to wasted effort. It can lead to the selection of irrelevant set of variables or to a wrong choice of the statistical method of analysis. A question that is not carefully formulated can also lead to the wrong choice of a model. Sup- Selection of potentially relevant variables
+> Regression analysis usually starts with a formulation of the problem. This includes the determination of the question(s) to be addressed by the analysis. The problem statement is the first and perhaps the most important step in regression analysis. It is important because an ill-defined problem or a misformulated question can lead to wasted effort. It can lead to the selection of irrelevant set of variables or to a wrong choice of the statistical method of analysis. A question that is not carefully formulated can also lead to the wrong choice of a model. Sup- Selection of potentially relevant variables. |
 
-- Selection of potentially relevant variables
+- #### Selection of potentially relevant variables
 
-Next step after the statement of the problem is to select a set of variables that
+> Next step after the statement of the problem is to select a set of variables that
 are thought by the experts in the area of study to explain or predict the response
 variable.
 
 - Data collection
 
-Based on the problem and variables under study, we can collect revelant data through appropriate means. The data mostly used now is secondary data, for research purpose primary data is need, which is collected through survey agencies, own surveys or online survey methods.
+> Based on the problem and variables under study, we can collect revelant data through appropriate means. The data mostly used now is secondary data, for research purpose primary data is need, which is collected through survey agencies, own surveys or online survey methods.
 
 - Model specification
 
-The form of the model that is thought to relate the response variable to the set of predictor variables can be specified initially by the experts in the area of study based on their knowledge or their objective and/or subjective judgments. The hypothesized model can then be either confirmed or refuted by the analysis of the collected data. Note that the model needs to be specified only in form, but it can still depend on unknown parameters. We need to select the form of the function f(X<sub>1</sub> , X<sub>2</sub>, ... ,X<sub>p</sub>) in (1.1). This function can be classified into two types: linear and nonlinear. An example of a linear function is 
-
-<p align = "center">Y = &beta;<sub>0</sub> + &beta;<sub>1</sub> + &epsilon; </p>
-
-while a non-linear function is 
-<p align="center">Y = &beta;<sub>0</sub> + e<sup>&beta;<sub>1</sub>X<sub>1</sub></sup> + &epsilon;	</p>
+> The form of the model that is thought to relate the response variable to the set of predictor variables can be specified initially by the experts in the area of study based on their knowledge or their objective and/or subjective judgments. The hypothesized model can then be either confirmed or refuted by the analysis of the collected data. Note that the model needs to be specified only in form, but it can still depend on unknown parameters. We need to select the form of the function f(X<sub>1</sub> , X<sub>2</sub>, ... ,X<sub>p</sub>) in (1.1). This function can be classified into two types: linear and nonlinear. An example of a linear function is 
+> <p align = "center">Y = &beta;<sub>0</sub> + &beta;<sub>1</sub> + &epsilon; </p>
+> while a non-linear function is 
+> <p align="center">Y = &beta;<sub>0</sub> + e<sup>&beta;<sub>1</sub>X<sub>1</sub></sup> + &epsilon;	</p>
 Note: A variable that can take only one of two possible valeus such as yes or no, 1 or 0, and sucess or failure, is called binary variable. In case of Binary variable as a response variable, the regreession we use is logistic regression.
+
+- Choice of fitting method
+
+> After the model has been defined and the data have been collected, the next task is to estimate the parameters of the model based on the collected data. This is also referred to as parameter estimation or model fitting. The most commonly used method of estimation is called the least squares method. Under certain assumptions, least squares method produce estimators with desirable properties.
+
+- Model fitting
+
+> The next step in the analysis is to estimate the regression parameters or to fit the model to the collected data using the chosen estimation method (e.g., least squares). The estimates of the regression parameters (&beta;<sub>0</sub>, &beta;<sub>1</sub>, ... , &beta;<sub>p</sub> are denoted by So, SI, ... ,Sp. The estimated regression equation then becomes
+
+$\hat{  }$
+
+- Model validation and criticism
+- Using the chosen model(s) for the solution of the posed problem.
+
 
 | Types of Regression  | Conditions   | 
 |-------------- | -------------- |
@@ -50,10 +63,3 @@ Note: A variable that can take only one of two possible valeus such as yes or no
 | Analysis of variance	| All predictors are qualitative variables |
 | Analysis of covariance| Some predictors are quantitative variables and others are qualitative variables|
 | Logistic 	| The response variableis qualitative |
-
-- Choice of fitting method
-- Model fitting
-- Model validation and criticism
-- Using the chosen model(s) for the solution of the posed problem.
-
-
