@@ -16,11 +16,11 @@ Where &beta;<sub>i</sub> are called the regression parameters or coefficients, a
 ### Steps in Regression Analysis
 
 
-- #### Statement of the problem
+- Statement of the problem
 
 > Regression analysis usually starts with a formulation of the problem. This includes the determination of the question(s) to be addressed by the analysis. The problem statement is the first and perhaps the most important step in regression analysis. It is important because an ill-defined problem or a misformulated question can lead to wasted effort. It can lead to the selection of irrelevant set of variables or to a wrong choice of the statistical method of analysis. A question that is not carefully formulated can also lead to the wrong choice of a model. Sup- Selection of potentially relevant variables. |
 
-- #### Selection of potentially relevant variables
+- Selection of potentially relevant variables
 
 > Next step after the statement of the problem is to select a set of variables that
 are thought by the experts in the area of study to explain or predict the response
@@ -44,9 +44,7 @@ Note: A variable that can take only one of two possible valeus such as yes or no
 
 - Model fitting
 
-> The next step in the analysis is to estimate the regression parameters or to fit the model to the collected data using the chosen estimation method (e.g., least squares). The estimates of the regression parameters (&beta;<sub>0</sub>, &beta;<sub>1</sub>, ... , &beta;<sub>p</sub> are denoted by So, SI, ... ,Sp. The estimated regression equation then becomes
-
-$\hat{  }$
+> The next step in the analysis is to estimate the regression parameters or to fit the model to the collected data using the chosen estimation method (e.g., least squares). 
 
 - Model validation and criticism
 - Using the chosen model(s) for the solution of the posed problem.
@@ -59,7 +57,7 @@ $\hat{  }$
 | Simple	| Only one predictor variable 		      |
 | Multiple	| Two or more predictor variables	|
 | Linear	| All parameters enter the equation linearly, possibly after transformation of the data	|
-|NonLinear	| Ther relationship between the response and some of the predictors is nonlinear or some of the parameters appear nonlinearly, but no transormation is possible to make the parameters appear linearly	|
+| NonLinear	| Ther relationship between the response and some of the predictors is nonlinear or some of the parameters appear nonlinearly, but no transormation is possible to make the parameters appear linearly	|
 | Analysis of variance	| All predictors are qualitative variables |
 | Analysis of covariance| Some predictors are quantitative variables and others are qualitative variables|
 | Logistic 	| The response variableis qualitative |
