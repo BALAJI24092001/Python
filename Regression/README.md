@@ -61,3 +61,26 @@ Note: A variable that can take only one of two possible valeus such as yes or no
 | Analysis of variance	| All predictors are qualitative variables |
 | Analysis of covariance| Some predictors are quantitative variables and others are qualitative variables|
 | Logistic 	| The response variableis qualitative |
+
+### Normalization
+
+This is a scaling technique, used to make all the data points range between 0 to 1 to remove the units of each mearuse factor. Formula to nomalize the data is
+
+<p align='center'>X<sub>new</sub> = ( X - X<sub>min</sub> ) / ( X<sub>max</sub> - X<sub>min</sub> ) </p>
+Note: Percentile of students in competative exams with multiple shifts uses min max scalar method, to generalize the marks allotation to all students from different exam shifts, which gives same scale for marks comparision irrespective of the shift or toughness of the exam.
+
+### Standardization
+
+<img src='imgs/standardization.png' align='right' width=300 >
+
+Standardization is a scaling method where the values are centered around mean with a unit standard deviation. It means if we will calculate mean and standard deviation of standard scores it will be 0 and 1 respectively. Formula to standardize the data is 
+
+<p align='center'> z = ( x - &mu; ) / &sigma; </p>
+Where, 
+&mu; = Mean of the distribution under study
+&sigma; = Standard deviation of the distribution under study
+
+Note: 
+
+1. If we plot the standardized data for KDE(kernal density extimation - Non parametric way to extimate the distribution of the data), we get a normal distribution with mean 0 and standard deviation 1. 
+2. In clase there exits outliers, Normalization is highly impacted, so standardization is preferred, since the outliers impact more on the mean, but considering as it is measure of central tendency, stadardization has less impact that normalization.
