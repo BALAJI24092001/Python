@@ -11,7 +11,7 @@ To measure the direction and the strenght of the relationship between Y and X, w
 
 **Covariance:** Covariance is a measure of how much two random variables vary together. It’s similar to variance, but where variance tells you how a single variable varies, co variance tells you how two variables vary together.
 
-$cov_{x,y}=\frac{\displaystyle\sum_{i=1}^{n}(x_{i}-\bar{x})(y_{i}-\bar{y})}{N-1}$
+<img src="https://render.githubusercontent.com/render/math?math=cov_{x,y}=\frac{\displaystyle\sum_{i=1}^{n}(x_{i}-\bar{x})(y_{i}-\bar{y})}{N-1}">
 
 Note: The population covariance is the same fomula, except `N` instead on `N - 1`. For any estimator of population parameter related to despersion, it is taken `N - 1`, as this extimator is found to be unbiased, consistent, efficient, and sufficient.
 
@@ -32,3 +32,26 @@ Note:
 So correlation is not a good measure if the realationship is not linear, and the correlation is effected by outliers. Tho emphasize this point, Anscombe has constructed four data sets, known as Anscombe quartet, each with distinct pattern, but each having the same correlation coefficient.
 
 <p align='center'> <img src='imgs/AnscombeQuartet.png'> </p>
+
+The relationship between a response variable Y and a predictor variable X is postulated as a linear model
+
+<p align='center'>Y = &beta;<sub>0</sub> + &beta;<sub>1</sub>X + &epsilon;,</p>
+
+Where &beta;<sub>0</sub> and &beta;<sub>1</sub> are constants called model regression coefficients or parameters, and &epsilon; is a random distrubance or error.
+A linear regression model is used to estmate a value based on any other value, given some data to train the model. Linear regression model is prefered when we observe a linear pattern in the scatter plot and correlation is high, then the results produced by this model is most likely to be equal to the original value.
+
+<img src="https://render.githubusercontent.com/render/math?math=\hat{\beta}_{1} = \frac{\sum_{}(y_{i} - \overline{y})(x_{i} - \overline{x})}{\sum_{}{(x_{i}- \overline{x})^2}}">
+
+and
+
+<img src="https://render.githubusercontent.com/render/math?math=\hat\beta_{0} = \overline{y} - \hat\beta_{1}\overline{x}">
+
+the y cap we got is called fitted values. It is the point on the least squares regression line corresponding to the independent variable value. The vertical distance corresponding to the i<sup>th</sup> observation is
+
+<p align='center'>e<sub>i</sub> = y<sub>i</sub> - &circ;y<sub>i</sub> </p>
+
+Another formula to find the coefficient of X is 
+
+<img src="http://render.githubusercontent.com/render/math?math=\hat\beta_{1} = \frac{Cov(Y, X)}{Var(X)} = Cor(Y, X)\frac{s_{y}}{s_{x}}">
+
+
