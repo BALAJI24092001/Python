@@ -1,30 +1,11 @@
-<style TYPE="text/css">
-code.has-jax {font: inherit; font-size: 100%; background: inherit; border: inherit;}
-</style>
-<script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-    tex2jax: {
-        inlineMath: [['$','$'], ['\\(','\\)']],
-        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'] // removed 'code' entry
-    }
-});
-MathJax.Hub.Queue(function() {
-    var all = MathJax.Hub.getAllJax(), i;
-    for(i = 0; i < all.length; i += 1) {
-        all[i].SourceElement().parentNode.className += ' has-jax';
-    }
-});
-</script>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS_HTML-full"></script>
-<!--LaTex code rendering test-->
 
 ## Linear Regression
 
 To measure the direction and the strenght of the relationship between Y and X, we find covariance and the correlation coefficient.
 
-**Variance:** Variance is a measurement of the spread between numbers in a data set. The variance of a variable tells, what is the average of the square of distance from the mean to each of the element. In case of another data with same mean, to find the spread of numbers, we use this measure to compare.
+**Variance:** Variance is a measurement of the spread between numbers in a data set. THe variance of a variable tells, what is the average of the square of distance from the mean to each of the element. In case of another data with same mean, to find the spread of numbers, we use this measure to compare.
 
-$\sigma^2 = \frac{\displaystyle\sum_{i=1}^{n}(x_i - \mu)^2} {n}$
+<img src="https://render.githubusercontent.com/render/math?math=\sigma^2 = \frac{\displaystyle\sum_{i=1}^{n}(x_i - \mu)^2} {n}">
 
 <img alt="Covariance Graphs" align="right" src="https://www.statisticshowto.com/wp-content/uploads/2013/12/g-covariance.gif">
 
