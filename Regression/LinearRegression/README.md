@@ -1,11 +1,8 @@
 
 ## Linear Regression
 
+Linear regression is used to formulate an equation to represent a relationship between two variables and predict the value of a variable based on the independent variable.
 To measure the direction and the strenght of the relationship between Y and X, we find covariance and the correlation coefficient.
-
-**Variance:** Variance is a measurement of the spread between numbers in a data set. THe variance of a variable tells, what is the average of the square of distance from the mean to each of the element. In case of another data with same mean, to find the spread of numbers, we use this measure to compare.
-
-<img src="https://render.githubusercontent.com/render/math?math=\sigma^2 = \frac{\displaystyle\sum_{i=1}^{n}(x_i - \mu)^2} {n}">
 
 <img alt="Covariance Graphs" align="right" src="https://www.statisticshowto.com/wp-content/uploads/2013/12/g-covariance.gif">
 
