@@ -85,3 +85,4 @@ Note:
 
 1. If we plot the standardized data for KDE(kernal density extimation - Non parametric way to extimate the distribution of the data), we get a normal distribution with mean 0 and standard deviation 1. 
 2. In clase there exits outliers, Normalization is highly impacted, so standardization is preferred, since the outliers impact more on the mean, but considering as it is measure of central tendency, stadardization has less impact that normalization.
+
