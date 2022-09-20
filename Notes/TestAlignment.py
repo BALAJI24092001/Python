@@ -3,11 +3,9 @@ width = 20
 print ('HackerRank'.ljust(width,'-'))
 
 # %%
-width = 20
 print ('HackerRank'.center(width,'-'))
 
 # %%
-width = 20
 print ('HackerRank'.rjust(width,'-'))
 
 # %%
