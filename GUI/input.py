@@ -6,14 +6,20 @@ df = pd.DataFrame()
 
 
 input1 = tkin.Entry(root, width = 50, borderwidth=2)
-tkin.Entry()
+input1.pack()
 print()
 
-def click():
-    mylab = tkin.Label(root, text=input1.get())
-    mylab.pack()
-butt = tkin.Button(root, text="Submit", command=click, padx=20)
-butt.pack()
+#def click():
+#    mylab = tkin.Label(root, text=input1.get())
+#    mylab.pack()
+
+i = 0;
+def but1En():
+    global i
+    input1.insert(i, '1')
+    i+=1;
+but = tkin.Button(root, text="Submit", command=but1En, padx=20)
+but.pack()
 
 
 root.mainloop();
