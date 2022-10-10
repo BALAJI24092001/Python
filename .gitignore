@@ -120,4 +120,4 @@ Descriptive\ Statistics/
 # (wont-fix = https://github.com/github/linguist/issues/3496)
 # I simply exclude this file from counting now:
 
-EDA/plotly.ipynb linguist-generated=true
+EDA/plotly.ipynb linguist-generated=false
