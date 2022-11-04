@@ -1,4 +1,6 @@
+*.ipynb linguist-detectable=false
 *.md linguist-detectable=true
+
 *.rst linguist-detectable=true
 
 
