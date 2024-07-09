@@ -37,7 +37,7 @@ The relationship between a response variable Y and a predictor variable X is pos
 Where &beta;<sub>0</sub> and &beta;<sub>1</sub> are constants called model regression coefficients or parameters, and &epsilon; is a random distrubance or error.
 A linear regression model is used to estmate a value based on any other value, given some data to train the model. Linear regression model is prefered when we observe a linear pattern in the scatter plot and correlation is high, then the results produced by this model is most likely to be equal to the original value.
 
-<img src="https://render.githubusercontent.com/render/math?math=\hat{\beta}_{1} = \frac{\sum_{}(y_{i} - \overline{y})(x_{i} - \overline{x})}{\sum_{}{(x_{i}- \overline{x})^2}}">
+$$=\hat{\beta}_{1} = \frac{\sum_{}(y_{i} - \overline{y})(x_{i} - \overline{x})}{\sum_{}{(x_{i}- \overline{x})^2}}$$
 
 and
 
