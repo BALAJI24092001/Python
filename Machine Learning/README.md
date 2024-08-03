@@ -20,8 +20,8 @@ The cost is a measure of how accurate the model is on the training data. The cos
 
 *Gradient descent* was described as:
 
-$$\begin{align} \text{repeat}&\text{ until convergence:} \; \lbrace \newline
-\;  w &= w -  \alpha \frac{\partial J(w,b)}{\partial w} \tag{3}  \; \newline 
+$$\begin{align} \text{repeat}&\text{ until convergence:}  \lbrace \newline
+ w &= w -  \alpha \frac{\partial J(w,b)}{\partial w} \tag{3}  \newline 
  b &= b -  \alpha \frac{\partial J(w,b)}{\partial b}  \newline \rbrace
 \end{align}$$
 
