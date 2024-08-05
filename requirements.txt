@@ -79,7 +79,7 @@ prompt-toolkit==3.0.28
 ptyprocess==0.7.0
 pure-eval==0.2.2
 pycparser==2.21
-pycryptodome==3.14.1
+pycryptodome==3.19.1
 pydantic==1.10.13
 pydub==0.25.1
 Pygments==2.15.0
