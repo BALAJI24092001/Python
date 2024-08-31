@@ -1,3 +1,18 @@
+| Distribution | Original Parameter | Natural Parameter (θ) | Link Function | Inverse Link (Mean Function) |
+|--------------|---------------------|------------------------|---------------|------------------------------|
+| Normal (Gaussian) | μ (mean) | μ | Identity: g(μ) = μ | g⁻¹(η) = η |
+| Bernoulli | p (probability) | log(p / (1-p)) | Logit: g(p) = log(p / (1-p)) | g⁻¹(η) = exp(η) / (1 + exp(η)) |
+| Binomial | p (probability) | log(p / (1-p)) | Logit: g(p) = log(p / (1-p)) | g⁻¹(η) = exp(η) / (1 + exp(η)) |
+| Poisson | λ (rate) | log(λ) | Log: g(λ) = log(λ) | g⁻¹(η) = exp(η) |
+| Exponential | λ (rate) | -λ | Negative Reciprocal: g(λ) = -1/λ | g⁻¹(η) = -1/η |
+| Gamma | μ (mean) | -1/μ | Reciprocal: g(μ) = 1/μ | g⁻¹(η) = 1/η |
+| Inverse Gaussian | μ (mean) | -1/(2μ²) | Inverse Square: g(μ) = 1/μ² | g⁻¹(η) = η^(-1/2) |
+| Negative Binomial | p (probability) | log(p) | Log: g(p) = log(p) | g⁻¹(η) = exp(η) |
+
+
+
+
+
 | Name of the distribution | PDF expression | Kullback-Leibler divergence | MLE | Source parameters | Natural Parameters | Expectation parameters | Log normalizer | Gradient Log normalizer | G | Gradient G | Sufficient statistics and carrier measure |
 |--------------------------|-----------------|------------------------------|-----|-------------------|---------------------|------------------------|----------------|-------------------------|---|------------|-------------------------------------------|
 | Normal (Gaussian) | $f(x;\mu,\sigma^2) = \frac{1}{\sqrt{2\pi\sigma^2}} e^{-\frac{(x-\mu)^2}{2\sigma^2}}$ | $D_{KL}(P\|Q) = \log\frac{\sigma_2}{\sigma_1} + \frac{\sigma_1^2 + (\mu_1 - \mu_2)^2}{2\sigma_2^2} - \frac{1}{2}$ | $\hat{\mu} = \frac{1}{n}\sum_{i=1}^n x_i$ <br> $\hat{\sigma}^2 = \frac{1}{n}\sum_{i=1}^n (x_i - \hat{\mu})^2$ | $\mu, \sigma^2$ | $\eta_1 = \frac{\mu}{\sigma^2}, \eta_2 = -\frac{1}{2\sigma^2}$ | $\mathbb{E}[X] = \mu, \mathbb{E}[X^2] = \mu^2 + \sigma^2$ | $A(\eta) = -\frac{\eta_1^2}{4\eta_2} - \frac{1}{2}\log(-2\eta_2)$ | $\nabla A(\eta) = [\frac{\eta_1}{-2\eta_2}, \frac{\eta_1^2}{4\eta_2^2} - \frac{1}{2\eta_2}]$ | $G(\mu, \sigma^2) = \mu^2 + \log(2\pi\sigma^2)$ | $\nabla G(\mu, \sigma^2) = [2\mu, \frac{1}{\sigma^2}]$ | $T(x) = [x, x^2], h(x) = \frac{1}{\sqrt{2\pi}}$ |
