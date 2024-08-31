@@ -2,7 +2,7 @@
 
 | Distribution | Type | PDF/PMF | CDF | Parameters | Usage |
 |--------------:|:------:|:---------:|:-----|------------|-------|
-| 1. Bernoulli | Discrete | $P(X=1) = p, P(X=0) = 1-p$ | $F(x) = \begin{cases}{} 0 & \text{if } x < 0 \\ 1-p & \text{if } 0 \leq x < 1 \\ 1 & \text{if } x \geq 1 \end{cases}$ | $p \in [0,1]$ | Models binary outcomes (success/failure) |
+| 1. Bernoulli | Discrete | $P(X=1) = p, P(X=0) = 1-p$ | $F(x) = \begin{cases}{} 0 & \text{if } x < 0 \\ 1-p & \text{if } 0 \leq x < 1 \\ 1 & \text{if } x \geq 1 \end{cases} \right. $ | $p \in [0,1]$ | Models binary outcomes (success/failure) |
 | 2. Binomial | Discrete | $P(X=k) = \binom{n}{k} p^k (1-p)^{n-k}$ | $F(x) = \sum_{k=0}^{\lfloor x \rfloor} \binom{n}{k} p^k (1-p)^{n-k}$ | $n > 0, p \in [0,1]$ | Number of successes in n independent Bernoulli trials |
 | 3. Poisson | Discrete | $P(X=k) = \frac{\lambda^k e^{-\lambda}}{k!}$ | $F(x) = e^{-\lambda} \sum_{k=0}^{\lfloor x \rfloor} \frac{\lambda^k}{k!}$ | $\lambda > 0$ | Models rare events in a fixed interval |
 | 4. Geometric | Discrete | $P(X=k) = p(1-p)^{k-1}$ | $F(x) = 1 - (1-p)^{\lfloor x \rfloor}$ | $p \in (0,1]$ | Number of trials until first success |
