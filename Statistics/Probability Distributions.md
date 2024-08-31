@@ -5,7 +5,7 @@
 
 | Distribution | Type | PDF/PMF | CDF | Parameters | Usage |
 |--------------:|:------:|:---------:|:-----|------------|-------|
-| 1. Bernoulli | Discrete | $P(X=1) = p, P(X=0) = 1-p$ | $$ math F(x) = \begin{cases} 0 & \text{if } x < 0 \\\\ 1-p & \text{if } 0 \leq x < 1 \\\\ 1 & \text{if } x \geq 1 \end{cases} $$ | $p \in [0,1]$ | Models binary outcomes (success/failure) |
+| 1. Bernoulli | Discrete | $P(X=1) = p, P(X=0) = 1-p$ | $F(x) = 0  if x < 0  1-p  if 0 \le x < 1  1 & if  x \ge 1$ | $p \in [0,1]$ | Models binary outcomes (success/failure) |
 | 2. Binomial | Discrete | $P(X=k) = \binom{n}{k} p^k (1-p)^{n-k}$ | $F(x) = \sum_{k=0}^{\lfloor x \rfloor} \binom{n}{k} p^k (1-p)^{n-k}$ | $n > 0, p \in [0,1]$ | Number of successes in n independent Bernoulli trials |
 | 3. Poisson | Discrete | $P(X=k) = \frac{\lambda^k e^{-\lambda}}{k!}$ | $F(x) = e^{-\lambda} \sum_{k=0}^{\lfloor x \rfloor} \frac{\lambda^k}{k!}$ | $\lambda > 0$ | Models rare events in a fixed interval |
 | 4. Geometric | Discrete | $P(X=k) = p(1-p)^{k-1}$ | $F(x) = 1 - (1-p)^{\lfloor x \rfloor}$ | $p \in (0,1]$ | Number of trials until first success |
@@ -19,7 +19,7 @@
 | 12. Beta | Continuous | $f(x) = \frac{x^{\alpha-1} (1-x)^{\beta-1}}{B(\alpha,\beta)}$ | No closed form | $\alpha > 0, \beta > 0$ | Modeling probabilities, proportions |
 | 13. Chi-square | Continuous | $f(x) = \frac{x^{k/2-1} e^{-x/2}}{2^{k/2} \Gamma(k/2)}$ | No closed form | $k > 0$ (integer) | Sum of squares of standard normal variables |
 | 14. Student's t | Continuous | $f(x) = \frac{\Gamma(\frac{v+1}{2})}{\sqrt{v\pi} \Gamma(\frac{v}{2})} (1 + \frac{x^2}{v})^{-\frac{v+1}{2}}$ | No closed form | $v > 0$ | Estimating mean of normally distributed population |
-| 15. F | Continuous | Complex formula (omitted for brevity) | No closed form | $d_1 > 0, d_2 > 0$ (integers) | Ratio of chi-square distributions, ANOVA |
+| 15. F | Continuous | $f(x) = \frac{\sqrt{\frac{(d_1x)^{d_1} \cdot d_2^{d_2}}{(d_1x + d_2)^{d_1+d_2}}}}{x \cdot B(\frac{d_1}{2}, \frac{d_2}{2})}$ | No closed form | $d_1 > 0, d_2 > 0$ (integers) | Ratio of chi-square distributions, ANOVA |
 | 16. Lognormal | Continuous | $f(x) = \frac{1}{x\sigma\sqrt{2\pi}} e^{-\frac{(\ln x-\mu)^2}{2\sigma^2}}$ | No closed form | $\mu \in \mathbb{R}, \sigma > 0$ | Product of many independent positive variables |
 | 17. Weibull | Continuous | $f(x) = \frac{k}{\lambda} (\frac{x}{\lambda})^{k-1} e^{-(x/\lambda)^k}$ | $F(x) = 1 - e^{-(x/\lambda)^k}$ | $k > 0, \lambda > 0$ | Reliability analysis, extreme value theory |
 | 18. Cauchy | Continuous | $f(x) = \frac{1}{\pi \gamma [1 + (\frac{x-x_0}{\gamma})^2]}$ | $F(x) = \frac{1}{\pi} \arctan(\frac{x-x_0}{\gamma}) + \frac{1}{2}$ | $x_0 \in \mathbb{R}, \gamma > 0$ | Long-tailed distributions, resonance behavior |
