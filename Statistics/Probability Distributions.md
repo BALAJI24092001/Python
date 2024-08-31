@@ -1,8 +1,11 @@
+
 # Comprehensive Table of Probability Distributions
+
+
 
 | Distribution | Type | PDF/PMF | CDF | Parameters | Usage |
 |--------------:|:------:|:---------:|:-----|------------|-------|
-| 1. Bernoulli | Discrete | $P(X=1) = p, P(X=0) = 1-p$ | $F(x) = \begin{cases}{} 0 & \text{if } x < 0 \\ 1-p & \text{if } 0 \leq x < 1 \\ 1 & \text{if } x \geq 1 \end{cases} \right. $ | $p \in [0,1]$ | Models binary outcomes (success/failure) |
+| 1. Bernoulli | Discrete | $P(X=1) = p, P(X=0) = 1-p$ | $$F(x) = \begin{cases} 0 & \text{if } x < 0 \\ 1-p & \text{if } 0 \leq x < 1 \\ 1 & \text{if } x \geq 1 \end{cases}$$ | $p \in [0,1]$ | Models binary outcomes (success/failure) |
 | 2. Binomial | Discrete | $P(X=k) = \binom{n}{k} p^k (1-p)^{n-k}$ | $F(x) = \sum_{k=0}^{\lfloor x \rfloor} \binom{n}{k} p^k (1-p)^{n-k}$ | $n > 0, p \in [0,1]$ | Number of successes in n independent Bernoulli trials |
 | 3. Poisson | Discrete | $P(X=k) = \frac{\lambda^k e^{-\lambda}}{k!}$ | $F(x) = e^{-\lambda} \sum_{k=0}^{\lfloor x \rfloor} \frac{\lambda^k}{k!}$ | $\lambda > 0$ | Models rare events in a fixed interval |
 | 4. Geometric | Discrete | $P(X=k) = p(1-p)^{k-1}$ | $F(x) = 1 - (1-p)^{\lfloor x \rfloor}$ | $p \in (0,1]$ | Number of trials until first success |
@@ -20,7 +23,7 @@
 | 16. Lognormal | Continuous | $f(x) = \frac{1}{x\sigma\sqrt{2\pi}} e^{-\frac{(\ln x-\mu)^2}{2\sigma^2}}$ | No closed form | $\mu \in \mathbb{R}, \sigma > 0$ | Product of many independent positive variables |
 | 17. Weibull | Continuous | $f(x) = \frac{k}{\lambda} (\frac{x}{\lambda})^{k-1} e^{-(x/\lambda)^k}$ | $F(x) = 1 - e^{-(x/\lambda)^k}$ | $k > 0, \lambda > 0$ | Reliability analysis, extreme value theory |
 | 18. Cauchy | Continuous | $f(x) = \frac{1}{\pi \gamma [1 + (\frac{x-x_0}{\gamma})^2]}$ | $F(x) = \frac{1}{\pi} \arctan(\frac{x-x_0}{\gamma}) + \frac{1}{2}$ | $x_0 \in \mathbb{R}, \gamma > 0$ | Long-tailed distributions, resonance behavior |
-| 19. Laplace | Continuous | $f(x) = \frac{1}{2b} e^{-\frac{\|x-\mu\|}{b}}$ | $F(x) = \begin{cases} \frac{1}{2} e^{\frac{x-\mu}{b}} & \text{if } x < \mu \\ 1 - \frac{1}{2} e^{-\frac{x-\mu}{b}} & \text{if } x \geq \mu \end{cases}$ | $\mu \in \mathbb{R}, b > 0$ | Double exponential distribution |
+| 19. Laplace | Continuous | $f(x) = \frac{1}{2b} e^{-\frac{\|x-\mu\|}{b}}$ | $$F(x) = \begin{cases} \frac{1}{2} e^{\frac{x-\mu}{b}} & \text{if } x < \mu \\ 1 - \frac{1}{2} e^{-\frac{x-\mu}{b}} & \text{if } x \geq \mu \end{cases}$$ | $\mu \in \mathbb{R}, b > 0$ | Double exponential distribution |
 | 20. Pareto | Continuous | $f(x) = \frac{\alpha x_m^\alpha}{x^{\alpha+1}}$ | $F(x) = 1 - (\frac{x_m}{x})^\alpha$ | $x_m > 0, \alpha > 0$ | Power law probability distributions |
 | 21. Logistic | Continuous | $f(x) = \frac{e^{-\frac{x-\mu}{s}}}{s(1 + e^{-\frac{x-\mu}{s}})^2}$ | $F(x) = \frac{1}{1 + e^{-\frac{x-\mu}{s}}}$ | $\mu \in \mathbb{R}, s > 0$ | Growth models, logistic regression |
 | 22. Rayleigh | Continuous | $f(x) = \frac{x}{\sigma^2} e^{-\frac{x^2}{2\sigma^2}}$ | $F(x) = 1 - e^{-\frac{x^2}{2\sigma^2}}$ | $\sigma > 0$ | Norms of bivariate normal variables |
