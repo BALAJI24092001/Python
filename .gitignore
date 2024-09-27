@@ -99,6 +99,7 @@ celerybeat-schedule
 celerybeat.pid
 
 Descriptive\ Statistics/
+DataBase/PySpark/.spark_venv
 
 
 # Testing laguage detection problem with jupyter notebook in github
