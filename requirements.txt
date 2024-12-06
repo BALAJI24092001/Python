@@ -30,7 +30,7 @@ ffmpy==0.3.0
 filelock==3.5.1
 fonttools==4.43.0
 frozenlist==1.3.0
-gradio==4.37.1
+gradio==4.44.0
 greenlet==1.1.2
 h11==0.13.0
 idna==3.7
