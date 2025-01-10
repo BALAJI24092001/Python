@@ -13,7 +13,7 @@ class stack:
         Returns number of values available in the stack.
     peek()
         Returns the top most number in the stack.
-    is_empty()
+    IsEmpty_()
         Return a boolean value based on the size of the stack.
     print()
         Prints the value in the stack in the stack format.
@@ -22,29 +22,29 @@ class stack:
     def __init__(self):
         self.lst = []
 
-    def push(self, a):
+    def push_(self, a):
         self.lst.append(a)
 
-    def pop(self):
-        if not self.is_empty():
+    def pop_(self):
+        if not self.IsEmpty_():
             return self.lst.pop()
         else:
             return "Stack is Empty!"
 
-    def size(self):
+    def size_(self):
         return len(self.lst)
 
-    def peek(self):
-        if not self.is_empty():
+    def peek_(self):
+        if not self.IsEmpty_():
             return self.lst[-1]
         else:
             print("Stack is Empty!")
 
-    def is_empty(self):
+    def Isempty_(self):
         return True if len(self.lst) == 0 else False
 
-    def print(self):
-        if not self.is_empty():
+    def print_(self):
+        if not self.IsEmpty_():
             print("Stack".center(12))
             for i in range(len(self.lst) - 1, -1, -1):
                 if i == len(self.lst) - 1:
@@ -79,12 +79,12 @@ if __name__ == "__main__":
     print(a)
 
     a = stack()
-    a.push(1)
-    a.push(2)
-    a.push(3)
-    a.push(5)
-    print(f"Popped an item off the stack: {a.pop()}")
-    a.push(4)
-    a.push(5)
-    print(f"Size of the stack is : {a.size()}")
-    a.print()
+    a.push_(1)
+    a.push_(2)
+    a.push_(3)
+    a.push_(5)
+    print(f"Popped an item off the stack: {a.pop_()}")
+    a.push_(4)
+    a.push_(5)
+    print(f"Size of the stack is : {a.size_()}")
+    a.print_()
