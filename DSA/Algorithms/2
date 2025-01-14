@@ -1,0 +1,9 @@
+    def binarySearch(lst: list, tar):
+        leng = len(lst)
+        index = leng // 2
+        if tar == lst[index]:
+            return f"index at position : {index}"
+        elif tar > lst[index]:
+            return binarySearch(lst[index:], tar)
+        else:
+            return binarySearch(lst[: index + 1], tar)

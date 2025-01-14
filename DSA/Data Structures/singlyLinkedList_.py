@@ -25,6 +25,7 @@ class SinglyLinkedList:
             print("Singly Linked List is Empty")
             return
         else:
+            print("Singly Linked List")
             temp = self.main
         while temp is not None:
             print("_" * 12)

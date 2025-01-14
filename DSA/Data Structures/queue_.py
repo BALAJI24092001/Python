@@ -1,4 +1,8 @@
 class queue:
+    """
+    Queue implementation in python using classes
+    """
+
     def __init__(self):
         self.lst = []
 

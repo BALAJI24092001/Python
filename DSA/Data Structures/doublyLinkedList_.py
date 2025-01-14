@@ -28,6 +28,7 @@ class DoublyLinkedList:
             print("Doubly Linked List is Empty")
             return
         else:
+            print("Doubly Linked List")
             temp = self.main
         while temp is not None:
             print("_" * 12)

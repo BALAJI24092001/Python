@@ -26,7 +26,7 @@ class stack:
         self.lst.append(a)
 
     def pop_(self):
-        if not self.IsEmpty_():
+        if not self.isEmpty_():
             return self.lst.pop()
         else:
             return "Stack is Empty!"
@@ -35,16 +35,16 @@ class stack:
         return len(self.lst)
 
     def peek_(self):
-        if not self.IsEmpty_():
+        if not self.isEmpty_():
             return self.lst[-1]
         else:
             print("Stack is Empty!")
 
-    def Isempty_(self):
+    def isEmpty_(self):
         return True if len(self.lst) == 0 else False
 
     def print_(self):
-        if not self.IsEmpty_():
+        if not self.isEmpty_():
             print("Stack".center(12))
             for i in range(len(self.lst) - 1, -1, -1):
                 if i == len(self.lst) - 1:
