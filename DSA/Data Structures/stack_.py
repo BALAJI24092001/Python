@@ -17,6 +17,20 @@ class stack:
         Return a boolean value based on the size of the stack.
     print()
         Prints the value in the stack in the stack format.
+
+    Definition:
+        1. A stack is a linear data structure that follows the LIFO (Last In, First Out) principle.
+        2. It means the last item added to the stack is the first one to be removed.
+        3. A stack has two primary operations:
+            Push: Add an item to the stack.
+            Pop: Remove the top item from the stack.
+        4. Additional operations include:
+            Peek/Top: View the top item without removing it.
+            IsEmpty: Check if the stack is empty.
+        5. Stacks are used in scenarios like undo operations, function calls, and expression evaluation.
+        6. A stack can be implemented using arrays, linked lists, or built-in data structures.
+        7. If the stack is full, attempting to push more items causes stack overflow.
+        8. If the stack is empty, attempting to pop causes stack underflow.
     """
 
     def __init__(self):

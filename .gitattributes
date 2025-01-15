@@ -4,7 +4,7 @@
 *.rst linguist-detectable=true
 
 
-*.md linguist-vendored=false
-*.md linguist-generated=false
-*.md linguist-documentation=false
+*.md linguist-vendored=true
+*.md linguist-generated=true
+*.md linguist-documentation=true
 *.md linguist-detectable=true
