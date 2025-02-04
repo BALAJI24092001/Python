@@ -8,11 +8,12 @@
 
 ## Algorithms
 
+<!-- TODO: Learn how to calculate time and space complexity for algorithms-->
+
 1. [Binary Search](./Algorithms/binarySearch_.py)
 2. [Bubble Sort](./Algorithms/bubbleSort_.py)
 3. [Selection Sort](./Algorithms/selectionSort_.py)
 4. [Insertion Sort](./Algorithms/insertionSort_.py)
-
 
 ## References
 
