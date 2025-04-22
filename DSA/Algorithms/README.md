@@ -1,6 +1,6 @@
 # ALGORITHMS
 
-## Time Complexity
+## Time and Space Complexity
 
 To fully understand algorithms we must understand how to evaluate the time an algorithm needs to do its job, the runtime.
 
@@ -56,6 +56,203 @@ $\Theta(𝑛)$ : Describes a tight bound (both upper and lower bounds) of a func
 **Definition**
 
 Let $f ( n)$ and $g ( n)$ be two functions. We say that $f ( n)$ is $O ( g ( n))$ if and only if there are positive constants $C$ and $n_0$ such that $C ⋅ g ( n) > f ( n)$ for all $n > n_0$ .
+
+## Kadane's Algorithm (sub-array sum)
+
+Given an array say [4, 3, -1, 5, 2, -8, 9], then the subarray is the continuous memory location of the given array.
+
+Subarrays of this given array can be [4], [4, 3], [4, 3, -1], and [3, -1, 5] etc.. [4, 3, 5, 2] is not a subarray.
+
+How can we find maximum subarray sum. The brute force method is
+
+```c++
+#include <iostream>
+#include <vector>
+#include <climits>
+using namespace std;
+
+int main (int argc, char *argv[]) {
+    int n = 7;
+    int arr[n] = {3, -4, 5, 4, -1, 7, -8};
+    int max_sum = INT_MIN;
+    for(int start = 0; start < n; ++start){
+        for(int end = start; end < n; ++end){
+            int curr_sum = 0;
+            for(int st = start; st <= end; ++st){
+                curr_sum += arr[st];
+            }
+            max_sum = max(curr_sum, max_sum);
+        }
+    }
+    std::cout << max_sum << endl;
+    return 0;
+}
+```
+
+Time complexity of the above brute force algorithm is $O(n^3)$, so instead we remove the third loop and instead of calculating the curr_sum every time for each subarray, we add the next element value to the previous subarray curr_sum if the start of the subarray is same.
+
+```c++
+#include <iostream>
+#include <vector>
+#include <climits>
+using namespace std;
+
+int main (int argc, char *argv[]) {
+    int n = 7;
+    int arr[n] = {3, -4, 5, 4, -1, 7, -8};
+    int max_sum = INT_MIN;
+    for(int start = 0; start < n; ++start){
+        int curr_sum = 0;
+        for(int end = start; end < n; ++end){
+            curr_sum += arr[end];
+            max_sum = max(curr_sum, max_sum);
+        }
+    }
+    std::cout << max_sum << endl;
+    return 0;
+}
+```
+
+Now the time comlexity is $O(n^2)$. To further reduce the time complexity to $O(n)$ we use Kadane's Algorithm.
+
+From the example array we took, let's try to understand this algorithm. The array is [3, -4, 5, 4, -1, 7, -8]. What we do in this algorithm is, we loop around the array only once and everytime we add the value to the curr_sum. Then compare the curr_sum to the max_sum and update the max_sum value. What's happening here is, when we add some negetive value to the subarray, and the total array value is negetive, we update the curr_sum to 0. Since any negetive value added to a positive value is less than the positive value, we begin with value 0 and hence reducing the time complexity to $O(n)$.
+
+```c++
+#include <iostream>
+#include <vector>
+#include <climits>
+using namespace std;
+
+int main (int argc, char *argv[]) {
+    int n = 7;
+    int arr[n] = {3, -4, 5, 4, -1, 7, -8};
+    int max_sum = INT_MIN, curr_sum = 0;
+    for(int start = 0; start < n; ++start){
+        curr_sum += arr[start];
+        max_sum = max(curr_sum, max_sum);
+        if(curr_sum < 0){
+            curr_sum = 0;
+        }
+    }
+    std::cout << max_sum << endl;
+    return 0;
+}
+
+```
+
+## Moore's Algorithm (majority element)
+
+Given an array of integers, we need to find out the one value from the array, where the number of times the value repeated in the array is greater than the floor value of the size of the array. i.e., if freq is the frequency of a value say `A`, and n is the total size of the array, if $freq > \lfloorn\rfloor$ then `A` is the Majority element in the array.
+
+Assuming there is exactly one majority element in an array, we can use different algorithms with different time complexiteis.
+
+**Brute Force Algorithm**
+
+```c++
+#include <iostream>
+#include <vector>
+#include <algorithm>
+using namespace std;
+
+class Solution {
+public:
+    int bruteForce(vector<int>& nums) {
+        int n = nums.size();
+        for(int i: nums){
+            int count = 0;
+            for(int j : nums){
+                if(i == j){
+                    ++count;
+                }
+            }
+            if(count > n/2){
+                return i;
+            }
+        }
+        return -1;
+    }
+};
+
+int main (int argc, char *argv[]) {
+    vector<int> prob = {1, 2, 2, 1, 1};
+    Solution Sol;
+    std::cout << "Brute Force Algorithm : " << Sol.bruteForce(prob) << endl;
+    return 0;
+}
+```
+
+The time complexity of this algorithm is $O(n^2)$ since there are two loops iterating on all the elements of the array.
+
+**Sorted Array Optimal Algorithm** <br>
+we sort the array and then calculate the frequencies with just only one loop. Except the problem is, we need a funtion to sort the array first, it takes nlogn operations and the main algorithm takes n iterations or less to find the majority element. So the overall time complexity is $O(nlogn)$.
+
+```c++
+#include <iostream>
+#include <vector>
+#include <algorithm>
+using namespace std;
+
+class Solution {
+public:
+    int sortOptimal(vector<int>& nums) {
+        int n = nums.size();
+        sort(nums.begin(), nums.end()); // sorting the vector
+        int freq = 0, ans = nums[0];
+        for(int i: nums){
+            if(i == ans){
+                freq++;
+            } else if(i != ans){
+                freq = 1;
+                ans = i;
+            }
+            if(freq > n/2){
+                return ans;
+            }
+        }
+        return -1;
+    }
+};
+
+int main (int argc, char *argv[]) {
+    vector<int> prob = {1, 2, 2, 1, 1};
+    Solution Sol;
+    std::cout << "Sorted Array Algorithm : " << Sol.sortOptimal(prob) << endl;
+    return 0;
+}
+```
+
+To further redute the number of operations, we use the Moore's algorithm. We begin with some random number as the solution and then iteratively pass though the array, keep incresing the frequency if the value matches, or reduce the frequency and change the value with that respective value if freq is 0. The main idea behind this algorithm is that, the overall sum of the frequency of the majority element is always positive, so if we keep on repeating this algorithm, for the majority element, the frequency never reaches 0 by the last iteration and the ans variable ends up being the actualy majority element.
+
+```c++
+#include <iostream>
+#include <vector>
+#include <algorithm>
+using namespace std;
+
+class Solution {
+public:
+    int mooresAlgorithm(vector<int>& nums) {
+        int freq = 0, ans = 0;
+        for(int i: nums){
+            if(freq == 0){
+                ans = i;
+            }
+            if(i == ans){
+                freq++;
+            } else{
+                freq--;
+            }
+        }
+        return ans;
+    }
+};
+int main (int argc, char *argv[]) {
+    vector<int> prob = {1, 2, 2, 1, 1};
+    Solution Sol;
+    std::cout << "Moore's Algorithm : " << Sol.mooresAlgorithm(prob) << endl;
+    return 0;
+}
+```
 
 ## Tree Traversals
 
