@@ -36,4 +36,5 @@ graph TD;
 
 ### Hash Table
 
-Load Factor: A ratio that that indicated how full the table. If `a` is the load factor then, $0 \leq a \leq 1$. 0 when the Hash table is empty, 1 when it's full.
+_Load Factor_: A ratio that indicated how full the table. If `a` is the load factor then, $0 \leq a \leq 1$. <br>
+**0 when the Hash table is empty <br>1 when it's full.**

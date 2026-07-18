@@ -48,3 +48,6 @@ circle "V4" as V4
 7. **Connected Graph**: A graph in which there is a path between any two vertices, ensuring that every vertex is reachable from any other vertex.
 8. **Tree**: A connected, acyclic graph, essentially a graph without cycles. Trees have a hierarchical structure, and each node (except the root) has exactly one parent node.
 9. **Bipartite Graph**: A graph whose vertices can be divided into two disjoint sets such that no two vertices within the same set are adjacent.
+<center>
+   <img src='https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Simple_bipartite_graph%3B_two_layers.svg/2560px-Simple_bipartite_graph%3B_two_layers.svg.png'  width = 400, height= 250>
+</center>
